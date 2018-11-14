@@ -72,8 +72,9 @@ KityMinder.registerUI('doc', function(minder) {
         loading = true;
 
         return minder.importData(doc.content, doc.protocol).then(function(data) {
-
-            doc.title = doc.title || minder.getMinderTitle();
+          console.log(data);
+  
+          doc.title = doc.title || minder.getMinderTitle();
 
             minder.execCommand('camera', minder.getRoot(), 300);
 
@@ -111,7 +112,6 @@ KityMinder.registerUI('doc', function(minder) {
     }
 
     function checkSaved(noConfirm) {
-        if (!fio.user.current()) return true;
         if (locked) return false;
         if (noConfirm) return current.saved;
         return current.saved || window.confirm(minder.getLang('ui.unsavedcontent', '* ' + current.title));

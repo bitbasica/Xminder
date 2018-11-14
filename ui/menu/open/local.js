@@ -84,7 +84,8 @@ KityMinder.registerUI('menu/open/local', function(minder) {
         if (!domfile) return;
 
         var info = new fio.file.anlysisPath(domfile.name);
-        var protocol = supports[info.extension];
+      console.log(info);
+      var protocol = supports[info.extension];
 
         if (!protocol || !protocol.decode) {
             notice.warn(minder.getLang('ui.unsupportedfile'));

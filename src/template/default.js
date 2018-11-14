@@ -22,7 +22,7 @@ KityMinder.registerTemplate('default', {
 
         // 一级节点
         if (level === 1) {
-            return node.getLayoutPointPreview().x > 0 ? 'right': 'left';
+            return node.getLayoutPointPreview().x > 0 ? 'right': 'right';
         }
 
         return node.parent.getLayout();

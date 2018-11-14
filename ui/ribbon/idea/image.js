@@ -37,7 +37,7 @@ KityMinder.registerUI('ribbon/idea/image', function(minder) {
 
     // writed by yangxiaohu 2014-10-20
     var tabs = new FUI.Tabs( {
-        buttons: [ "图片搜索", "插入图片" ]
+        buttons: ["插入图片" ]
     } );
 
     $dialogBody.html([
@@ -46,13 +46,9 @@ KityMinder.registerUI('ribbon/idea/image', function(minder) {
         ].join(''));
     tabs.appendButtonTo( document.getElementById( 'img_buttons') );
     tabs.appendPanelTo( document.getElementById( 'img_panels'));
+    
 
-    tabs.getPanel(0).getContentElement().innerHTML =  ['<div class="searchBar"><label>关键字：</label><input id="img_searchTxt" type="text" placeholder="请输入搜索关键词">',
-        '<button id="img_searchBtn">百度一下</button></div>',
-        '<div id="img_searchList"><ul id="img_searchListUl"></ul></div>'
-        ].join('');
-
-    tabs.getPanel(1).getContentElement().innerHTML =  ['<p><label>图片地址：</label><input type="url" class="image-url fui-widget fui-selectable" /></p>',
+    tabs.getPanel(0).getContentElement().innerHTML =  ['<p><label>图片地址：</label><input type="url" class="image-url fui-widget fui-selectable" /></p>',
         '<p><label>提示文本：</label><input type="text" class="image-title fui-widget fui-selectable" /></p>',
         '<img class="image-preview" src="" style="max-height: 200px;" />'].join('');
 
@@ -225,11 +221,8 @@ KityMinder.registerUI('ribbon/idea/image', function(minder) {
         var index = tabs.getSelectedIndex();
 
         switch(index) {
-            case 1:
-                minder.execCommand('image', $url.val(), $title.val());
-                break;
             case 0:
-                minder.execCommand('image', searchImage.data.imgUrl, searchImage.data.imgTitle);
+                minder.execCommand('image', $url.val(), $title.val());
                 break;
         }
 
