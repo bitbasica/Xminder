@@ -112,9 +112,7 @@ KityMinder.registerUI('doc', function(minder) {
     }
 
     function checkSaved(noConfirm) {
-        if (locked) return false;
-        if (noConfirm) return current.saved;
-        return current.saved || window.confirm(minder.getLang('ui.unsavedcontent', '* ' + current.title));
+        return true
     }
 
     /* 绕开初始化时候的乱事件 */
