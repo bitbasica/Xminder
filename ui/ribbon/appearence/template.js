@@ -19,9 +19,10 @@ KityMinder.registerUI('ribbon/appearence/template', function(minder) {
 
 
     var templateList = KityMinder.Utils.keys(KityMinder.getTemplateList());
-    var $templateSelect = $commandselectmenu.generate('template', templateList, 2);
-
-    $tabs.appearence.appendWidget($templatePanel);
+  console.log(templateList);
+  var $templateSelect = $commandselectmenu.generate('template', templateList, 2);
+  console.log($templateSelect);
+  $tabs.appearence.appendWidget($templatePanel);
     $templatePanel.appendWidget($templateSelect);
 
     return $templatePanel;

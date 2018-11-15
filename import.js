@@ -9,18 +9,15 @@
 
         /* 依赖库 */
         { path: 'lib/jquery-2.1.1.js',                  pack: '*' },
-        { path: 'lib/promise-1.0.0.js',                 pack: '*' },
         { path: 'lib/jquery.xml2json.js',               pack: 'edit|share|m-share' },
         { path: 'lib/jquery.transit.min.js',            pack: 'edit|share|m-share' },
         { path: 'lib/jquery.blob.js',                   pack: 'edit' },
         { path: 'lib/zip.js',                           pack: 'edit' },
         { path: 'lib/ZeroClipboard.min.js',             pack: 'edit' },
-        { path: 'lib/qrcode.js',                        pack: 'edit' },
         { path: 'lib/fui/dev-lib/jhtmls.min.js',        pack: 'edit|share|m-share' },
         { path: 'lib/fui/dist/fui.all.js',              pack: 'edit|share|m-share' },
         { path: 'lib/fio/src/fio.js',                   pack: 'index|edit' },
         { path: 'lib/fio/provider/netdisk/oauth.js',    pack: 'index|edit' },
-        { path: 'lib/fio/provider/netdisk/netdisk.js',  pack: 'edit' },
         { path: 'lib/bower/codemirror/lib/codemirror.js',               pack: 'edit' },
         { path: 'lib/bower/codemirror/mode/xml/xml.js',                 pack: 'edit' },
         { path: 'lib/bower/codemirror/mode/javascript/javascript.js',   pack: 'edit' },
@@ -127,13 +124,6 @@
 
         /* 格式支持 */
         { path: 'src/protocol/xmind.js',                pack: 'edit' },
-        // { path: 'src/protocol/freemind.js',             pack: 'edit' },
-        // { path: 'src/protocol/mindmanager.js',          pack: 'edit' },
-        // { path: 'src/protocol/plain.js',                pack: 'edit|share|m-share' },
-        // { path: 'src/protocol/markdown.js',             pack: 'edit|share|m-share' },
-        // { path: 'src/protocol/json.js',                 pack: 'edit|share|m-share' },
-        // { path: 'src/protocol/png.js',                  pack: 'edit|share|m-share' },
-        // { path: 'src/protocol/svg.js',                  pack: 'edit|share|m-share' },
 
         /* UI 基础 */
         { path: 'ui/ui.js',                             pack: 'edit|share|m-share' },
@@ -151,7 +141,6 @@
         { path: 'ui/widget/notice.js',                  pack: 'edit|share|m-share' },
         { path: 'ui/widget/friendlytimespan.js',        pack: 'edit' },
         { path: 'ui/widget/locallist.js',               pack: 'edit' },
-        { path: 'ui/widget/netdiskfinder.js',           pack: 'edit' },
         { path: 'ui/widget/menutab.js',                 pack: 'edit|share|m-share' },
 
         /* 基本业务 */
@@ -174,25 +163,14 @@
 
         /* UI 菜单 - 打开 */
         { path: 'ui/menu/open/open.js',                 pack: 'edit' },
-        // { path: 'ui/menu/open/recent.js',               pack: 'edit' },
         { path: 'ui/menu/open/local.js',                pack: 'edit' },
 
         /* UI 菜单 - 保存 */
         { path: 'ui/menu/save/save.js',                 pack: 'edit|share' },
-        // { path: 'ui/menu/save/netdisk.js',              pack: 'edit' },
-        { path: 'ui/menu/save/download.js',             pack: 'edit|share' },
-        //
-        // /* UI 菜单 - 分享 */
-        // { path: 'ui/menu/share/view.js',                pack: 'share' },
-
+     
         /* UI Top Bar */
         { path: 'ui/topbar/quickvisit.js',              pack: 'edit|share' },
         { path: 'ui/topbar/history.js',                 pack: 'edit' },
-        // { path: 'ui/topbar/user.js',                    pack: 'edit' },
-        // { path: 'ui/topbar/feedback.js',                pack: 'edit|share' },
-        // { path: 'ui/topbar/search.js',                  pack: 'edit|share' },
-        // { path: 'ui/topbar/switch-view.js',             pack: 'm-share' },
-        // { path: 'ui/topbar/m-logo.js',                  pack: 'm-share' },
         { path: 'ui/topbar/title.js',                   pack: 'edit|share|m-share' },
 
         /* UI Ribbon */
