@@ -109,7 +109,7 @@ KityMinder.registerProtocol('xmind', function (minder) {
           // 查找文档入口
           while ((entry = entries.pop())) {
             
-            if (entry.filename.split('/').pop() == 'content.xml') break;
+            if (entry.filename.split('/').pop() === 'content.xml') break;
             
             entry = null;
             
@@ -141,24 +141,36 @@ KityMinder.registerProtocol('xmind', function (minder) {
     },
     
     encode: function (json, km, options) {
-      var url = '';
+      var url = '/xmind/djcpsdocument/fileManager/saveXmind.do?';
       var data = JSON.stringify(json);
       
       function fetch() {
         return new Promise(function (resolve, reject) {
-          
+          $.ajax(url, {
+            method: 'POST',
+            contentType: 'applicaiton/json',
+            data: JSON.stringify({
+              'filename': options.filename,
+              'data': JSON.parse(data)
+            }),
+          }).then(function (res) {
+            console.log(res);
+          });
           // var xhr = new XMLHttpRequest();
           // xhr.open('POST', url);
-          //
           // xhr.responseType = 'blob';
           // xhr.onload = resolve;
           // xhr.onerror = reject;
+          // // var form = new FormData();
+          // // form.append('type', 'xmind');
+          // // form.append('data', data);
+          // var postData = {};
+          // postData.filename = options.filename;
+          // postData.data = data;
+          // console.log(data);
+          // xhr.send({
           //
-          // var form = new FormData();
-          // form.append('type', 'xmind');
-          // form.append('data', data);
-          console.log(data);
-          // xhr.send(form);
+          // });
           
         }).then(function (e) {
           return e.target.response;
@@ -188,8 +200,9 @@ KityMinder.registerProtocol('xmind', function (minder) {
           return input;
         }
       }
-      
-      if (options && options.download) {
+  
+      console.log(options);
+      if (options && !options.download) {
         return download();
       } else {
         return fetch();
