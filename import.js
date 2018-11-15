@@ -167,7 +167,6 @@
 
         /* UI 菜单 - 保存 */
         { path: 'ui/menu/save/save.js',                 pack: 'edit|share' },
-        { path: 'ui/menu/save/netdisk.js',              pack: 'edit' },
         { path: 'ui/menu/save/download.js',             pack: 'edit|share' },
 
         /* UI 菜单 - 分享 */

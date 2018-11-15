@@ -55,9 +55,6 @@ KityMinder.registerUI('menu/save/download', function(minder) {
         };
 
         minder.exportData(protocol.name, options).then(function(data) {
-
-            if (protocol.name == 'freemind') return;
-
             switch (protocol.dataType) {
                 case 'text':
                     return doDownload(buildDataUrl(mineType, data), filename, 'text');
@@ -129,14 +126,6 @@ KityMinder.registerUI('menu/save/download', function(minder) {
             $('<input name="iehack" value="1" />').appendTo($form);
         }
         $('<input name="stamp" />').val(stamp).appendTo($form);
-
-        var netdisk = minder.getUI('menu/save/netdisk');
-        if (netdisk) {
-            netdisk.mute = true;
-            setTimeout(function() {
-                netdisk.mute = false;
-            }, 1000);
-        }
 
         $form.appendTo('body').submit().remove();
 

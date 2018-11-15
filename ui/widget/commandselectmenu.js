@@ -21,7 +21,6 @@ KityMinder.registerUI('widget/commandselectmenu', function(minder) {
     }
 
     function generate(command, valueList, column) {
-      console.log(command, valueList, column);
       var $selectMenu = new FUI.SelectMenu({
             widgets: typeof(valueList[0]) == 'object' ? valueList : mapValueWidget(command, valueList),
             className: ['command-widget', 'command-selectmenu', command].join(' '),
@@ -31,9 +30,8 @@ KityMinder.registerUI('widget/commandselectmenu', function(minder) {
         $selectMenu.bindExecution('change', function() {
           minder.execCommand(command, $selectMenu.getValue());
         });
-        minder.execCommand('template', 'right');   //默认选择right
+        
         $selectMenu.bindCommandState(minder, command, function(value) {
-          console.log(value);
           if (value !== undefined) this.selectByValue(value);
         });
 

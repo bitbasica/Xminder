@@ -15,11 +15,6 @@ KityMinder.registerUI('menu/default', function(minder) {
         var $save = minder.getUI('menu/save/save');
 
         setMenuDefaults();
-        
-        // $menu.show();
-        // $menu.$tabs.select(1);
-        // $open.$tabs.select(1);
-        // return;
       
         function setMenuDefaults() {
 
@@ -31,13 +26,6 @@ KityMinder.registerUI('menu/default', function(minder) {
 
             // 保存菜单默认选中「导出到本地」
             $save.$tabs.select(1);
-
-            // 如果用户登陆了，选中「百度云存储」
-            fio.user.check().then(function(user) {
-                if (user) {
-                    $save.$tabs.select(0);
-                }
-            });
         }
         
     });
