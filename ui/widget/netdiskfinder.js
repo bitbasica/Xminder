@@ -85,8 +85,6 @@ KityMinder.registerUI('widget/netdiskfinder', function(minder) {
         var selected = null;
 
         minder.on('uiready', function() {
-            var $user = minder.getUI('topbar/user');
-            $user.requireLogin($container);
             fio.user.on('login', function() {
                 list();
             });
@@ -154,7 +152,7 @@ KityMinder.registerUI('widget/netdiskfinder', function(minder) {
                     if (fio.file.anlysisPath(newFilename).extension != file.extension) {
                         $input.addClass('invalid-name');
                         setTimeout(function () {
-                            $input.removeClass('invalid-name'); 
+                            $input.removeClass('invalid-name');
                         }, 500);
                         return $input.select();
                     }

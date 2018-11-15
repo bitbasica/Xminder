@@ -9,13 +9,11 @@
 
         /* 依赖库 */
         { path: 'lib/jquery-2.1.1.js',                  pack: '*' },
-        { path: 'lib/promise-1.0.0.js',                 pack: '*' },
         { path: 'lib/jquery.xml2json.js',               pack: 'edit|share|m-share' },
         { path: 'lib/jquery.transit.min.js',            pack: 'edit|share|m-share' },
         { path: 'lib/jquery.blob.js',                   pack: 'edit' },
         { path: 'lib/zip.js',                           pack: 'edit' },
         { path: 'lib/ZeroClipboard.min.js',             pack: 'edit' },
-        { path: 'lib/qrcode.js',                        pack: 'edit' },
         { path: 'lib/fui/dev-lib/jhtmls.min.js',        pack: 'edit|share|m-share' },
         { path: 'lib/fui/dist/fui.all.js',              pack: 'edit|share|m-share' },
         { path: 'lib/fio/src/fio.js',                   pack: 'index|edit' },
@@ -26,7 +24,6 @@
         { path: 'lib/bower/codemirror/mode/javascript/javascript.js',   pack: 'edit' },
         { path: 'lib/bower/codemirror/mode/css/css.js',                 pack: 'edit' },
         { path: 'lib/bower/codemirror/mode/htmlmixed/htmlmixed.js',     pack: 'edit' },
-        { path: 'lib/bower/codemirror/mode/markdown/markdown.js',       pack: 'edit' },
         { path: 'lib/bower/codemirror/addon/mode/overlay.js',           pack: 'edit' },
         { path: 'lib/bower/codemirror/mode/gfm/gfm.js',                 pack: 'edit' },
 
@@ -155,10 +152,7 @@
 
         /* 视野导航 */
         { path: 'ui/nav.js',                            pack: 'edit|share' },
-
-        /* UI Top Bar */
-        { path: 'ui/topbar/moreservice.js',             pack: 'edit|share'},
-
+        
         /* UI 菜单 */
         { path: 'ui/menu/menu.js',                      pack: 'edit|share' },
         { path: 'ui/menu/header.js',                    pack: 'edit|share' },
@@ -169,10 +163,7 @@
 
         /* UI 菜单 - 打开 */
         { path: 'ui/menu/open/open.js',                 pack: 'edit' },
-        { path: 'ui/menu/open/recent.js',               pack: 'edit' },
-        { path: 'ui/menu/open/netdisk.js',              pack: 'edit' },
         { path: 'ui/menu/open/local.js',                pack: 'edit' },
-        { path: 'ui/menu/open/draft.js',                pack: 'edit' },
 
         /* UI 菜单 - 保存 */
         { path: 'ui/menu/save/save.js',                 pack: 'edit|share' },
@@ -180,22 +171,11 @@
         { path: 'ui/menu/save/download.js',             pack: 'edit|share' },
 
         /* UI 菜单 - 分享 */
-        { path: 'ui/menu/share/share.js',               pack: 'edit' },
         { path: 'ui/menu/share/view.js',                pack: 'share' },
-        { path: 'ui/menu/share/m-share.js',             pack: 'm-share' },
-
-        /* UI 菜单 - 帮助 */
-        { path: 'ui/menu/help/help.js',                 pack: 'edit|share'},
-        { path: 'ui/menu/help/feedback.js',             pack: 'edit|share'},
 
         /* UI Top Bar */
         { path: 'ui/topbar/quickvisit.js',              pack: 'edit|share' },
         { path: 'ui/topbar/history.js',                 pack: 'edit' },
-        { path: 'ui/topbar/user.js',                    pack: 'edit' },
-        { path: 'ui/topbar/feedback.js',                pack: 'edit|share' },
-        { path: 'ui/topbar/search.js',                  pack: 'edit|share' },
-        { path: 'ui/topbar/switch-view.js',             pack: 'm-share' },
-        { path: 'ui/topbar/m-logo.js',                  pack: 'm-share' },
         { path: 'ui/topbar/title.js',                   pack: 'edit|share|m-share' },
 
         /* UI Ribbon */
