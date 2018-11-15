@@ -9,7 +9,11 @@
 /* global marked: true */
 KityMinder.registerUI('ribbon/idea/note', function(minder) {
     var axss = minder.getUI('axss');
-    
+
+    marked.setOptions({
+        gfm: true,
+        breaks: true
+    });
 
     var $attachment = minder.getUI('ribbon/idea/attachment');
 
@@ -33,10 +37,10 @@ KityMinder.registerUI('ribbon/idea/note', function(minder) {
     var $title = $('<h2>节点备注</h2>').appendTo($notePanel);
     var $close = $('<a class="close"></a>').appendTo($notePanel).click(hide);
 
-    var $tab = $('<div class="tab">' +
-        '<a class="edit-tab">编辑</a>' +
-        '<a class="preview-tab">预览</a>' +
-        '<a class="help" href="https://www.zybuluo.com/techird/note/46064" target="_blank">支持 GFM 语法书写</a>' +
+    var $tab = $('<div class="tab">' + 
+        '<a class="edit-tab">编辑</a>' + 
+        '<a class="preview-tab">预览</a>' + 
+        '<a class="help" href="https://www.zybuluo.com/techird/note/46064" target="_blank">支持 GFM 语法书写</a>' + 
         '</div>').appendTo($notePanel);
 
     var $editTab = $tab.find('.edit-tab');

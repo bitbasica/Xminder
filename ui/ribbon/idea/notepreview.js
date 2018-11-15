@@ -9,7 +9,11 @@
 /* global marked: true */
 KityMinder.registerUI('ribbon/idea/notepreview', function(minder) {
     var axss = minder.getUI('axss');
-    
+
+    marked.setOptions({
+        gfm: true,
+        breaks: true
+    });
 
     var $previewer = $('<div id="note-previewer"></div>').appendTo('#content-wrapper');
 

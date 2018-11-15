@@ -40,12 +40,11 @@ KityMinder.registerUI('menu/save/download', function(minder) {
 
     $list.delegate('li', 'click', function(e) {
         var protocol = $(e.target).data('protocol');
-      console.log(protocol);
-      if (!$panel.hasClass('loading')) doExport(protocol);
+        if (!$panel.hasClass('loading')) doExport(protocol);
     });
 
     function doExport(protocol) {
-      var filename = minder.getMinderTitle() + protocol.fileExtension;
+        var filename = minder.getMinderTitle() + protocol.fileExtension;
         var mineType = protocol.mineType || 'text/plain';
 
         $panel.addClass('loading');
@@ -56,8 +55,8 @@ KityMinder.registerUI('menu/save/download', function(minder) {
         };
 
         minder.exportData(protocol.name, options).then(function(data) {
-          console.log(protocol);
-          if (protocol.name == 'freemind') return;
+
+            if (protocol.name == 'freemind') return;
 
             switch (protocol.dataType) {
                 case 'text':
@@ -103,6 +102,7 @@ KityMinder.registerUI('menu/save/download', function(minder) {
         var content = url.split(',')[1];
 
         var $form = $('<form></form>').attr({
+            'action': 'download.php',
             'method': 'POST',
             'accept-charset': 'utf-8'
         });

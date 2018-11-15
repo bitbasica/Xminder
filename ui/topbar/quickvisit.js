@@ -23,11 +23,13 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
     }
 
     var $new = btn('new'),
-        $save = btn('save');
+        $save = btn('save'),
+        $share = btn('share');
 
     var ret = {
         $new: $new,
         $save: $save,
+        $share: $share
     };
 
     minder.on('uiready', function quickVisit() {
@@ -50,20 +52,34 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
         }
 
         function quickSave() {
-            // minder.getUI('menu/save/netdisk').quickSave();
+            minder.getUI('menu/save/netdisk').quickSave();
         }
-        
+
+        function quickShare() {
+            var $menu = minder.getUI('menu/menu');
+            $menu.$tabs.select(3);
+            $menu.show();
+        }
 
 
         $new.click(quickNew);
         $save.click(quickSave);
+        $share.click(quickShare);
 
         minder.addShortcut('ctrl+alt+n', quickNew);
         minder.addShortcut('ctrl+s', quickSave);
+        minder.addShortcut('ctrl+alt+s', quickShare);
+        minder.addShortcut('ctrl+shift+s', function() {
+            var $menu = minder.getUI('menu/menu');
+            $menu.$tabs.select(2);
+            $menu.show();
+        });
 
         ret.ready = true;
         ret.quickNew = quickNew;
         ret.quickSave = quickSave;
+        ret.quickShare = quickShare;
+
     });
 
     ret.add = btn;

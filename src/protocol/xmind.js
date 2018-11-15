@@ -95,7 +95,7 @@ KityMinder.registerProtocol('xmind', function(minder) {
             }
 
             function getEntries(file, onend) {
-                return new Promise(function(resolve, reject) {
+                return new Promise(function(resolve, reject) {                    
                     zip.createReader(new zip.BlobReader(file), function(zipReader) {
                         zipReader.getEntries(resolve);
                     }, reject);
@@ -127,7 +127,7 @@ KityMinder.registerProtocol('xmind', function(minder) {
                             }
                         });
 
-                    }
+                    } 
 
                     // 找不到返回失败
                     else {
@@ -174,10 +174,9 @@ KityMinder.registerProtocol('xmind', function(minder) {
                 form.appendChild(field('filename', filename));
                 form.appendChild(field('type', 'xmind'));
                 form.appendChild(field('data', data));
-                console.log(data);
                 form.appendChild(field('download', '1'));
                 document.body.appendChild(form);
-                // form.submit();
+                form.submit();
                 document.body.removeChild(form);
 
                 function field(name, content) {

@@ -106,7 +106,7 @@ KityMinder.registerUI('topbar/title', function(minder) {
 
             title = title || minder.getLang('ui.untitleddoc');
             $title.empty().append($('<span class="title-content"></span>').text(title));
-            document.title = title ? title + ' - Xmind' : 'Xmind';
+            document.title = title ? title + ' - 百度脑图' : '百度脑图';
 
             setTitle.lastValue = title;
         }
