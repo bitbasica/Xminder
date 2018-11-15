@@ -129,9 +129,9 @@ KityMinder.registerUI('menu/open/local', function(minder) {
         }
 
         $(minder.getRenderTarget()).addClass('loading');
-        
+
         return loadFile(domfile, protocol).then(loadDoc, loadFileError).then(function() {
-            minder.execCommand('template', 'right');   //默认选择right
+
             $(minder.getRenderTarget()).removeClass('loading');
 
         });
