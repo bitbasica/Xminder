@@ -17,7 +17,7 @@ kity.extendClass(Minder, (function() {
         },
 
         getTemplate: function() {
-            return this._template || 'default';
+            return this._template || 'right';
         },
 
         setTemplate: function(name) {
@@ -64,7 +64,7 @@ KityMinder.registerModule('TemplateModule', {
             },
 
             queryValue: function(minder) {
-                return minder.getTemplate() || 'default';
+                return minder.getTemplate() || 'right';
             }
         })
     }
