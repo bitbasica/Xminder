@@ -96,7 +96,7 @@ kity.extendClass(Minder, {
     
     importNode(this._root, json, this);
     
-    this.setTemplate(json.template || 'default');
+    this.setTemplate(json.template || 'right');
     this.setTheme(json.theme || null);
     this.refresh();
     
