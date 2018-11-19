@@ -30,9 +30,9 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
   function read(domfile) {
     if (!domfile) return;
     
-    var info = new fio.file.anlysisPath(domfile.name);
-    console.log(info);
-    var protocol = supports[info.extension];
+    // var info = new fio.file.anlysisPath(domfile.name);
+    // console.log(info);
+    var protocol = supports['.xmind'];
     
     if (!protocol || !protocol.decode) {
       notice.warn(minder.getLang('ui.unsupportedfile'));
@@ -68,10 +68,10 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       var doc = {
         content: data.content,
         protocol: protocol.name,
-        title: info.filename,
-        source: 'local'
+        title: '2323.xmind',
+        source: 'netdisk'
       };
-      
+      console.log(doc);
       return $doc.load(doc);
     }
     
@@ -92,6 +92,8 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       read(this.files[0]);
     }).click();
   });
+  // 读取文件流，展示该xmind
+  read('/xmind/djcpsdocument/fileManager/downloadFile.do?id=a102dabf2b54415781eeb272afba63fb');
   var ret = {
     $open: $open
   };

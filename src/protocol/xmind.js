@@ -94,9 +94,9 @@ KityMinder.registerProtocol('xmind', function (minder) {
         return result;
       }
       
-      function getEntries(file, onend) {
+      function getEntries(url, onend) {
         return new Promise(function (resolve, reject) {
-          zip.createReader(new zip.BlobReader(file), function (zipReader) {
+          zip.createReader(new zip.HttpReader(url), function (zipReader) {
             zipReader.getEntries(resolve);
           }, reject);
         });
