@@ -141,6 +141,7 @@ KityMinder.registerProtocol('xmind', function (minder) {
     },
     
     encode: function (json, km, options) {
+      var data = JSON.stringify(json);
       saveFun();
       
       function download() {

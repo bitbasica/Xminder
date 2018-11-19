@@ -8,8 +8,6 @@
       var openUrl = '/xmind/djcpsdocument/fileManager/downloadFile.do?id=a102dabf2b54415781eeb272afba63fb';
       var saveFun = function () {
         var url = '/xmind/djcpsdocument/fileManager/saveXmind.do?';
-        var data = JSON.stringify(json);
-
         function fetch() {
           return new Promise(function (resolve, reject) {
             $.ajax(url, {
