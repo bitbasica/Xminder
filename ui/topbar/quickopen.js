@@ -93,7 +93,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
     }).click();
   });
   // 读取文件流，展示该xmind
-  read('/xmind/djcpsdocument/fileManager/downloadFile.do?id=a102dabf2b54415781eeb272afba63fb');
+  read(openUrl);
   var ret = {
     $open: $open
   };

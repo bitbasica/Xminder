@@ -109,7 +109,6 @@ kity.extendClass(Minder, {
   },
   
   exportData: function (protocolName, options) {
-    console.log('exportData');
     var json, protocol;
     
     json = this.exportJson();
@@ -129,13 +128,10 @@ kity.extendClass(Minder, {
       protocolName: protocolName,
       protocol: protocol
     }));
-  
-    console.log(protocol);
+    
     if (protocol) {
-      console.log(1);
       return Promise.resolve(protocol.encode(json, this, options));
     } else {
-      console.log(2);
       return Promise.resolve(json);
     }
   },
@@ -168,7 +164,7 @@ kity.extendClass(Minder, {
       resolve(protocol ? protocol.decode(local) : local);
       
     }).then(function (json) {
-      console.log(json);
+      
       minder.importJson(json, params);
       
       return json;

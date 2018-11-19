@@ -4,6 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>XMind</title>
+    <script>
+      var openUrl = '/xmind/djcpsdocument/fileManager/downloadFile.do?id=a102dabf2b54415781eeb272afba63fb';
+      var saveFun = function () {
+        var url = '/xmind/djcpsdocument/fileManager/saveXmind.do?';
+        var data = JSON.stringify(json);
+
+        function fetch() {
+          return new Promise(function (resolve, reject) {
+            $.ajax(url, {
+              method: 'POST',
+              contentType: 'applicaiton/json',
+              data: JSON.stringify({
+                'filename': options.filename,
+                'data': JSON.parse(data)
+              }),
+            }).then(function (res) {
+              console.log(res);
+            });
+          }).then(function (e) {
+            return e.target.response;
+          });
+        }
+      }
+    </script>
     <script src="import.js?pack=edit" charset="utf-8"></script>
     <script src="kityminder.config.js" charset="utf-8"></script>
     <script src="lang/zh-cn/zh-cn.js" charset="utf-8"></script>
