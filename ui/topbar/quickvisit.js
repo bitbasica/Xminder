@@ -69,7 +69,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       if (!$doc.checkSaved()) return;
       $doc.load({
         content: {
-          template: 'default',
+          template: 'right',
           version: KityMinder.version,
           data: {
             text: minder.getLang('maintopic')

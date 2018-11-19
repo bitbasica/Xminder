@@ -153,28 +153,9 @@
         /* 视野导航 */
         { path: 'ui/nav.js',                            pack: 'edit|share' },
         
-        /* UI 菜单 */
-        { path: 'ui/menu/menu.js',                      pack: 'edit|share' },
-        { path: 'ui/menu/header.js',                    pack: 'edit|share' },
-        { path: 'ui/menu/default.js',                   pack: 'edit' },
-
-        /* UI 菜单 - 新建 */
-        { path: 'ui/menu/new/new.js',                   pack: 'edit' },
-
-        /* UI 菜单 - 打开 */
-        { path: 'ui/menu/open/open.js',                 pack: 'edit' },
-        { path: 'ui/menu/open/local.js',                pack: 'edit' },
-
-        /* UI 菜单 - 保存 */
-        { path: 'ui/menu/save/save.js',                 pack: 'edit|share' },
-        { path: 'ui/menu/save/download.js',             pack: 'edit|share' },
-
-        /* UI 菜单 - 分享 */
-        { path: 'ui/menu/share/view.js',                pack: 'share' },
-
         /* UI Top Bar */
-        { path: 'ui/topbar/quickvisit.js',              pack: 'edit|share' },
         { path: 'ui/topbar/quickopen.js',               pack: 'edit|share' },
+        { path: 'ui/topbar/quickvisit.js',              pack: 'edit|share' },
         { path: 'ui/topbar/history.js',                 pack: 'edit' },
         { path: 'ui/topbar/title.js',                   pack: 'edit|share|m-share' },
 
