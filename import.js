@@ -17,8 +17,6 @@
         { path: 'lib/fui/dev-lib/jhtmls.min.js',        pack: 'edit' },
         { path: 'lib/fui/dist/fui.all.js',              pack: 'edit' },
         { path: 'lib/fio/src/fio.js',                   pack: 'index|edit' },
-        { path: 'lib/fio/provider/netdisk/oauth.js',    pack: 'index|edit' },
-        { path: 'lib/fio/provider/netdisk/netdisk.js',  pack: 'edit' },
         { path: 'lib/bower/codemirror/lib/codemirror.js',               pack: 'edit' },
 
         /* Kity 依赖库 */
@@ -127,7 +125,6 @@
         { path: 'ui/memory.js',                         pack: 'edit' },
         { path: 'ui/fuix.js',                           pack: 'edit' },
         { path: 'ui/axss.js',                           pack: 'edit' },
-        { path: 'ui/fiox.js',                           pack: 'edit' },
 
         /* UI 组件 */
         { path: 'ui/widget/commandbutton.js',           pack: 'edit' },
