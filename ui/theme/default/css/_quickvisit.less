@@ -9,7 +9,7 @@
     display: block;
     position: relative;
     -webkit-app-region: no-drag;
-    
+
     &:after {
         content: ' ';
         position: absolute;
@@ -21,20 +21,27 @@
         background: url(../images/icons.png) no-repeat;
     }
     text-indent: -10000px;
-    
+
     &.new {
         &:after {
             background-position: 0 -895px;
         }
     }
-    
+
     &.save {
-        
+
         &:after {
             background-position: 0 -920px;
         }
     }
-    
+
+    &.open {
+
+        &:after {
+            background-position: 0 -419px;
+        }
+    }
+
     &.share {
 
         &:after {

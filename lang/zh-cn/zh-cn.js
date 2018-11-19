@@ -189,6 +189,7 @@ KityMinder.LANG['zh-cn'] = {
         },
 
         'quickvisit': {
+            'open': '打开本地',
             'new': '新建 (Ctrl + Alt + N)',
             'save': '保存 (Ctrl + S)',
             'share': '分享 (Ctrl + Alt + S)',

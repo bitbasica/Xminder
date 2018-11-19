@@ -33,17 +33,5 @@ km = KM.getMinder('kityminder', window.KITYMINDER_CONFIG);
 
 // init ui for instance
 km.initUI();
-
-// New Version Notify
-$(function() {
-
-    var lastVersion = localStorage.lastKMVersion;
-    $('#km-version').text( 'v' + KM.version );
-
-    if (lastVersion != KM.version) {
-        $( '#km-version' ).addClass( 'new-version' );
-        localStorage.lastKMVersion = KM.version;
-    }
-});
 </script>
 </html>

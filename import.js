@@ -174,6 +174,7 @@
 
         /* UI Top Bar */
         { path: 'ui/topbar/quickvisit.js',              pack: 'edit|share' },
+        { path: 'ui/topbar/quickopen.js',               pack: 'edit|share' },
         { path: 'ui/topbar/history.js',                 pack: 'edit' },
         { path: 'ui/topbar/title.js',                   pack: 'edit|share|m-share' },
 
