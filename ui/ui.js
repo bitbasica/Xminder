@@ -82,7 +82,7 @@
 
     // preload css images
     $(function() {
-        var list = ["kmcat_warn.png", "kmcat_sad.png", "icons.png", "template_large.png", "history.png", "feedback.png", "iconpriority.png", "iconprogress.png", "template.png", "layout.png", "next-level.png", "prev-level.png"];
+        var list = ["icons.png","history.png","iconpriority.png", "iconprogress.png", "template.png", "layout.png", "next-level.png", "prev-level.png"];
         list.forEach(function(item) {
             (new Image()).src = 'ui/theme/default/images/' + item;
         });

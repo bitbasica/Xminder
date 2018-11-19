@@ -32,8 +32,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
 
   function doExport(protocol) {
     var filename = minder.getMinderTitle() + protocol.fileExtension;
-    var mineType = protocol.mineType || 'text/plain';
-    
+  
     var options = {
       download: true,
       filename: filename
@@ -66,7 +65,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       
       var $dialogBody = $($newDialog.getBodyElement());
       var $doc = minder.getUI('doc');
-      if (!$doc.checkSaved()) return;
+      if (!$doc.checkSaved()) return false;
       $doc.load({
         content: {
           template: 'right',

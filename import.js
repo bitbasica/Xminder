@@ -9,117 +9,111 @@
 
         /* 依赖库 */
         { path: 'lib/jquery-2.1.1.js',                  pack: '*' },
-        { path: 'lib/jquery.xml2json.js',               pack: 'edit|share|m-share' },
-        { path: 'lib/jquery.transit.min.js',            pack: 'edit|share|m-share' },
+        { path: 'lib/jquery.xml2json.js',               pack: 'edit' },
+        { path: 'lib/jquery.transit.min.js',            pack: 'edit' },
         { path: 'lib/jquery.blob.js',                   pack: 'edit' },
         { path: 'lib/zip.js',                           pack: 'edit' },
         { path: 'lib/ZeroClipboard.min.js',             pack: 'edit' },
-        { path: 'lib/fui/dev-lib/jhtmls.min.js',        pack: 'edit|share|m-share' },
-        { path: 'lib/fui/dist/fui.all.js',              pack: 'edit|share|m-share' },
+        { path: 'lib/fui/dev-lib/jhtmls.min.js',        pack: 'edit' },
+        { path: 'lib/fui/dist/fui.all.js',              pack: 'edit' },
         { path: 'lib/fio/src/fio.js',                   pack: 'index|edit' },
         { path: 'lib/fio/provider/netdisk/oauth.js',    pack: 'index|edit' },
         { path: 'lib/fio/provider/netdisk/netdisk.js',  pack: 'edit' },
         { path: 'lib/bower/codemirror/lib/codemirror.js',               pack: 'edit' },
-        { path: 'lib/bower/codemirror/mode/xml/xml.js',                 pack: 'edit' },
-        { path: 'lib/bower/codemirror/mode/javascript/javascript.js',   pack: 'edit' },
-        { path: 'lib/bower/codemirror/mode/css/css.js',                 pack: 'edit' },
-        { path: 'lib/bower/codemirror/mode/htmlmixed/htmlmixed.js',     pack: 'edit' },
-        { path: 'lib/bower/codemirror/addon/mode/overlay.js',           pack: 'edit' },
-        { path: 'lib/bower/codemirror/mode/gfm/gfm.js',                 pack: 'edit' },
 
         /* Kity 依赖库 */
-        { path: 'lib/kity/dist/kity.js',                pack: 'edit|share|m-share' },
+        { path: 'lib/kity/dist/kity.js',                pack: 'edit' },
 
         /* 核心代码 */
-        { path: 'src/core/kityminder.js',               pack: 'edit|share|m-share' },
-        { path: 'src/core/utils.js',                    pack: 'edit|share|m-share' },
-        { path: 'src/core/browser.js',                  pack: 'edit|share|m-share' },
-        { path: 'src/core/minder.js',                   pack: 'edit|share|m-share' },
+        { path: 'src/core/kityminder.js',               pack: 'edit' },
+        { path: 'src/core/utils.js',                    pack: 'edit' },
+        { path: 'src/core/browser.js',                  pack: 'edit' },
+        { path: 'src/core/minder.js',                   pack: 'edit' },
 
-        { path: 'src/core/command.js',                  pack: 'edit|share|m-share' },
-        { path: 'src/core/node.js',                     pack: 'edit|share|m-share' },
+        { path: 'src/core/command.js',                  pack: 'edit' },
+        { path: 'src/core/node.js',                     pack: 'edit' },
 
-        { path: 'src/core/option.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/core/event.js',                    pack: 'edit|share|m-share' },
-        { path: 'src/core/status.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/core/paper.js',                    pack: 'edit|share|m-share' },
-        { path: 'src/core/select.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/core/key.js',                      pack: 'edit|share|m-share' },
-        { path: 'src/core/contextmenu.js',              pack: 'edit|share|m-share' },
-        { path: 'src/core/module.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/core/data.js',                     pack: 'edit|share|m-share' },
-        { path: 'src/core/readonly.js',                 pack: 'edit|share|m-share' },
-        { path: 'src/core/layout.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/core/theme.js',                    pack: 'edit|share|m-share' },
+        { path: 'src/core/option.js',                   pack: 'edit' },
+        { path: 'src/core/event.js',                    pack: 'edit' },
+        { path: 'src/core/status.js',                   pack: 'edit' },
+        { path: 'src/core/paper.js',                    pack: 'edit' },
+        { path: 'src/core/select.js',                   pack: 'edit' },
+        { path: 'src/core/key.js',                      pack: 'edit' },
+        { path: 'src/core/contextmenu.js',              pack: 'edit' },
+        { path: 'src/core/module.js',                   pack: 'edit' },
+        { path: 'src/core/data.js',                     pack: 'edit' },
+        { path: 'src/core/readonly.js',                 pack: 'edit' },
+        { path: 'src/core/layout.js',                   pack: 'edit' },
+        { path: 'src/core/theme.js',                    pack: 'edit' },
 
-        { path: 'src/core/compatibility.js',            pack: 'edit|share|m-share' },
-        { path: 'src/core/render.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/core/connect.js',                  pack: 'edit|share|m-share' },
-        { path: 'src/core/template.js',                 pack: 'edit|share|m-share' },
-        { path: 'src/core/lang.js',                     pack: 'edit|share|m-share' },
-        { path: 'src/core/defaultoptions.js',           pack: 'edit|share|m-share' },
-        { path: 'src/core/preference.js',               pack: 'edit|share|m-share' },
-        { path: 'src/core/keymap.js',                   pack: 'edit|share|m-share' },
+        { path: 'src/core/compatibility.js',            pack: 'edit' },
+        { path: 'src/core/render.js',                   pack: 'edit' },
+        { path: 'src/core/connect.js',                  pack: 'edit' },
+        { path: 'src/core/template.js',                 pack: 'edit' },
+        { path: 'src/core/lang.js',                     pack: 'edit' },
+        { path: 'src/core/defaultoptions.js',           pack: 'edit' },
+        { path: 'src/core/preference.js',               pack: 'edit' },
+        { path: 'src/core/keymap.js',                   pack: 'edit' },
 
         /* 布局 */
-        { path: 'src/layout/mind.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/layout/filetree.js',               pack: 'edit|share|m-share' },
-        { path: 'src/layout/btree.js',                  pack: 'edit|share|m-share' },
-        { path: 'src/layout/fish-bone-master.js',       pack: 'edit|share|m-share' },
-        { path: 'src/layout/fish-bone-slave.js',        pack: 'edit|share|m-share' },
-        { path: 'src/layout/tianpan.js',                 pack: 'edit|share|m-share' },
+        { path: 'src/layout/mind.js',                   pack: 'edit' },
+        { path: 'src/layout/filetree.js',               pack: 'edit' },
+        { path: 'src/layout/btree.js',                  pack: 'edit' },
+        { path: 'src/layout/fish-bone-master.js',       pack: 'edit' },
+        { path: 'src/layout/fish-bone-slave.js',        pack: 'edit' },
+        { path: 'src/layout/tianpan.js',                 pack: 'edit' },
 
         /* 连线 */
-        { path: 'src/connect/bezier.js',                pack: 'edit|share|m-share' },
-        { path: 'src/connect/poly.js',                  pack: 'edit|share|m-share' },
-        { path: 'src/connect/arc.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/connect/under.js',                 pack: 'edit|share|m-share' },
-        { path: 'src/connect/l.js',                     pack: 'edit|share|m-share' },
-        { path: 'src/connect/fish-bone-master.js',      pack: 'edit|share|m-share' },
-        { path: 'src/connect/arc_tp.js',                  pack: 'edit|share|m-share' },
+        { path: 'src/connect/bezier.js',                pack: 'edit' },
+        { path: 'src/connect/poly.js',                  pack: 'edit' },
+        { path: 'src/connect/arc.js',                   pack: 'edit' },
+        { path: 'src/connect/under.js',                 pack: 'edit' },
+        { path: 'src/connect/l.js',                     pack: 'edit' },
+        { path: 'src/connect/fish-bone-master.js',      pack: 'edit' },
+        { path: 'src/connect/arc_tp.js',                  pack: 'edit' },
 
         /* 皮肤 */
-        { path: 'src/theme/default.js',                 pack: 'edit|share|m-share' },
-        { path: 'src/theme/snow.js',                    pack: 'edit|share|m-share' },
-        { path: 'src/theme/fresh.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/theme/fish.js',                    pack: 'edit|share|m-share' },
-        { path: 'src/theme/wire.js',                    pack: 'edit|share|m-share' },
-        { path: 'src/theme/tianpan.js',                 pack: 'edit|share|m-share' },
+        { path: 'src/theme/default.js',                 pack: 'edit' },
+        { path: 'src/theme/snow.js',                    pack: 'edit' },
+        { path: 'src/theme/fresh.js',                   pack: 'edit' },
+        { path: 'src/theme/fish.js',                    pack: 'edit' },
+        { path: 'src/theme/wire.js',                    pack: 'edit' },
+        { path: 'src/theme/tianpan.js',                 pack: 'edit' },
 
         /* 模板 */
-        { path: 'src/template/default.js',              pack: 'edit|share|m-share' },
-        { path: 'src/template/structure.js',            pack: 'edit|share|m-share' },
-        { path: 'src/template/filetree.js',             pack: 'edit|share|m-share' },
-        { path: 'src/template/right.js',                pack: 'edit|share|m-share' },
-        { path: 'src/template/fish-bone.js',            pack: 'edit|share|m-share' },
-        { path: 'src/template/tianpan.js',              pack: 'edit|share|m-share' },
+        { path: 'src/template/default.js',              pack: 'edit' },
+        { path: 'src/template/structure.js',            pack: 'edit' },
+        { path: 'src/template/filetree.js',             pack: 'edit' },
+        { path: 'src/template/right.js',                pack: 'edit' },
+        { path: 'src/template/fish-bone.js',            pack: 'edit' },
+        { path: 'src/template/tianpan.js',              pack: 'edit' },
 
         /* 模块 */
-        { path: 'src/module/node.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/module/text.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/module/expand.js',                 pack: 'edit|share|m-share' },
-        { path: 'src/module/outline.js',                pack: 'edit|share|m-share' },
-        { path: 'src/module/geometry.js',               pack: 'edit|share|m-share' },
-        { path: 'src/module/history.js',                pack: 'edit|share|m-share' },
-        { path: 'src/module/progress.js',               pack: 'edit|share|m-share' },
-        { path: 'src/module/priority.js',               pack: 'edit|share|m-share' },
-        { path: 'src/module/image.js',                  pack: 'edit|share|m-share' },
-        { path: 'src/module/resource.js',               pack: 'edit|share|m-share' },
-        { path: 'src/module/note.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/module/view.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/module/dragtree.js',               pack: 'edit|share|m-share' },
-        { path: 'src/module/keynav.js',                 pack: 'edit|share|m-share' },
-        { path: 'src/module/select.js',                 pack: 'edit|share|m-share' },
+        { path: 'src/module/node.js',                   pack: 'edit' },
+        { path: 'src/module/text.js',                   pack: 'edit' },
+        { path: 'src/module/expand.js',                 pack: 'edit' },
+        { path: 'src/module/outline.js',                pack: 'edit' },
+        { path: 'src/module/geometry.js',               pack: 'edit' },
+        { path: 'src/module/history.js',                pack: 'edit' },
+        { path: 'src/module/progress.js',               pack: 'edit' },
+        { path: 'src/module/priority.js',               pack: 'edit' },
+        { path: 'src/module/image.js',                  pack: 'edit' },
+        { path: 'src/module/resource.js',               pack: 'edit' },
+        { path: 'src/module/note.js',                   pack: 'edit' },
+        { path: 'src/module/view.js',                   pack: 'edit' },
+        { path: 'src/module/dragtree.js',               pack: 'edit' },
+        { path: 'src/module/keynav.js',                 pack: 'edit' },
+        { path: 'src/module/select.js',                 pack: 'edit' },
         { path: 'src/module/history.js',                pack: 'edit' },
         { path: 'src/module/editor.js',                 pack: 'edit' },
         { path: 'src/module/editor.keyboard.js',        pack: 'edit' },
         { path: 'src/module/editor.range.js',           pack: 'edit' },
         { path: 'src/module/editor.receiver.js',        pack: 'edit' },
         { path: 'src/module/editor.selection.js',       pack: 'edit' },
-        { path: 'src/module/basestyle.js',              pack: 'edit|share|m-share' },
-        { path: 'src/module/font.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/module/zoom.js',                   pack: 'edit|share|m-share' },
-        { path: 'src/module/hyperlink.js',              pack: 'edit|share|m-share' },
+        { path: 'src/module/basestyle.js',              pack: 'edit' },
+        { path: 'src/module/font.js',                   pack: 'edit' },
+        { path: 'src/module/zoom.js',                   pack: 'edit' },
+        { path: 'src/module/hyperlink.js',              pack: 'edit' },
         { path: 'src/module/arrange.js',                pack: 'edit' },
         { path: 'src/module/clipboard.js',              pack: 'edit' },
         { path: 'src/module/style.js',                  pack: 'edit' },
@@ -128,36 +122,35 @@
         { path: 'src/protocol/xmind.js',                pack: 'edit' },
 
         /* UI 基础 */
-        { path: 'ui/ui.js',                             pack: 'edit|share|m-share' },
-        { path: 'ui/eve.js',                            pack: 'edit|share|m-share' },
-        { path: 'ui/memory.js',                         pack: 'edit|share|m-share' },
-        { path: 'ui/fuix.js',                           pack: 'edit|share|m-share' },
-        { path: 'ui/axss.js',                           pack: 'edit|share|m-share' },
+        { path: 'ui/ui.js',                             pack: 'edit' },
+        { path: 'ui/eve.js',                            pack: 'edit' },
+        { path: 'ui/memory.js',                         pack: 'edit' },
+        { path: 'ui/fuix.js',                           pack: 'edit' },
+        { path: 'ui/axss.js',                           pack: 'edit' },
         { path: 'ui/fiox.js',                           pack: 'edit' },
 
         /* UI 组件 */
-        { path: 'ui/widget/commandbutton.js',           pack: 'edit|share' },
+        { path: 'ui/widget/commandbutton.js',           pack: 'edit' },
         { path: 'ui/widget/commandbuttonset.js',        pack: 'edit' },
         { path: 'ui/widget/commandinputmenu.js',        pack: 'edit' },
         { path: 'ui/widget/commandselectmenu.js',       pack: 'edit' },
-        { path: 'ui/widget/notice.js',                  pack: 'edit|share|m-share' },
+        { path: 'ui/widget/notice.js',                  pack: 'edit' },
         { path: 'ui/widget/friendlytimespan.js',        pack: 'edit' },
         { path: 'ui/widget/locallist.js',               pack: 'edit' },
-        { path: 'ui/widget/netdiskfinder.js',           pack: 'edit' },
-        { path: 'ui/widget/menutab.js',                 pack: 'edit|share|m-share' },
+        { path: 'ui/widget/menutab.js',                 pack: 'edit' },
 
         /* 基本业务 */
-        { path: 'ui/doc.js',                            pack: 'edit|share|m-share' },
-        { path: 'ui/contextmenu.js',                    pack: 'edit|share' },
+        { path: 'ui/doc.js',                            pack: 'edit' },
+        { path: 'ui/contextmenu.js',                    pack: 'edit' },
 
         /* 视野导航 */
-        { path: 'ui/nav.js',                            pack: 'edit|share' },
+        { path: 'ui/nav.js',                            pack: 'edit' },
         
         /* UI Top Bar */
-        { path: 'ui/topbar/quickopen.js',               pack: 'edit|share' },
-        { path: 'ui/topbar/quickvisit.js',              pack: 'edit|share' },
+        { path: 'ui/topbar/quickopen.js',               pack: 'edit' },
+        { path: 'ui/topbar/quickvisit.js',              pack: 'edit' },
         { path: 'ui/topbar/history.js',                 pack: 'edit' },
-        { path: 'ui/topbar/title.js',                   pack: 'edit|share|m-share' },
+        { path: 'ui/topbar/title.js',                   pack: 'edit' },
 
         /* UI Ribbon */
         { path: 'ui/ribbon/tabs.js',                    pack: 'edit' },
@@ -170,7 +163,6 @@
         { path: 'ui/ribbon/idea/link.js',               pack: 'edit' },
         { path: 'ui/ribbon/idea/image.js',              pack: 'edit' },
         { path: 'ui/ribbon/idea/note.js',               pack: 'edit' },
-        { path: 'ui/ribbon/idea/notepreview.js',        pack: 'edit|share' },
         { path: 'ui/ribbon/idea/priority.js',           pack: 'edit' },
         { path: 'ui/ribbon/idea/progress.js',           pack: 'edit' },
         { path: 'ui/ribbon/idea/resource.js',           pack: 'edit' },
@@ -194,54 +186,6 @@
     }
 
     else if (document) {
-
-        // currentScript polyfill
-        if("undefined" === typeof document.currentScript){
-            (function(){
-                /***************************************************************************/
-                /* document.currentScript polyfill + improvements */
-                /***************************************************************************/
-                var scripts = document.getElementsByTagName('script');
-                document._currentScript = document.currentScript;
-
-                // return script object based off of src
-                var getScriptFromURL = function(url) {
-                    for (var i = 0; i < scripts.length; i++)
-                        if (scripts[i].src === url)
-                            return scripts[i];
-
-                    return undefined;
-                };
-
-                var actualScript = document.actualScript = function() {
-                    if (document._currentScript)
-                        return document._currentScript;
-
-                    var stack;
-                    try {
-                        window.omgwtf();
-                    } catch(e) {
-                        stack = e.stack;
-                    }
-
-                    if (!stack)
-                        return undefined;
-
-                    var e = stack.indexOf(' at ') !== -1 ? ' at ' : '@';
-                    while (stack.indexOf(e) !== -1)
-                        stack = stack.substring(stack.indexOf(e) + e.length);
-
-                    stack = stack.substring(stack.indexOf('http'), stack.indexOf(':', stack.indexOf(':')+1));
-
-                    return getScriptFromURL(stack);
-                };
-                if (document.__defineGetter__)
-                    document.__defineGetter__('currentScript', actualScript);
-
-            })();
-
-
-        }
         /* jshint browser:true */
         var script = document.currentScript || document.actualScript();
         var src = script.src;

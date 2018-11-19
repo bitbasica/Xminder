@@ -34,8 +34,6 @@ KityMinder.registerUI('ribbon/idea/note', function(minder) {
 
     var $tab = $('<div class="tab">' +
         '<a class="edit-tab">编辑</a>' +
-        '<a class="preview-tab">预览</a>' +
-        '<a class="help" href="https://www.zybuluo.com/techird/note/46064" target="_blank">支持 GFM 语法书写</a>' +
         '</div>').appendTo($notePanel);
 
     var $editTab = $tab.find('.edit-tab');

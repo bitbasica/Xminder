@@ -48,7 +48,7 @@ module.exports = function(grunt) {
             options: {
                 banner: banner + '(function(window) {\n\n',
                 footer: '\n\n})(window)',
-                sourceMap: true,
+                sourceMap: false,
                 sourceMapStyle: 'link'
             },
             src: sources.filter(function(source) {
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
             minimize: {
                 options: {
                     banner: banner,
-                    sourceMap: true
+                    sourceMap: false
                 },
                 files: (function() {
                     var files = {};
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
                     ]
                 },
                 options: {
-                    sourceMap: true,
+                    sourceMap: false,
                     sourceMapFilename: 'ui/theme/default/css/default.all.temp.css.map',
                     sourceMapBasepath: 'ui/theme/default/css/'
                 }
