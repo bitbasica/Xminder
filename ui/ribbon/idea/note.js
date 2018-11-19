@@ -65,7 +65,8 @@ KityMinder.registerUI('ribbon/idea/note', function(minder) {
         if (noteVisible && selectedNode != minder.getSelectedNode()) {
             selectedNode = minder.getSelectedNode();
             var note = minder.queryCommandValue('note') || '';
-            editor.setValue(note);
+          console.log(note);
+          editor.setValue(note);
 
             if (selectedNode) {
                 $notePanel.removeAttr('disabled');
