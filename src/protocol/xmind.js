@@ -156,7 +156,7 @@ KityMinder.registerProtocol('xmind', function (minder) {
         return new Promise(function (resolve, reject) {
           $.ajax(window.selfData.saveUrl,ajaxOptions).then(function (res) {
             if (res.success){
-              window.afterSaveFunc(res);
+              window.selfData.afterSaveFunc(res);
               resolve(res);
             } else {
               reject(res);
