@@ -142,17 +142,19 @@ KityMinder.registerProtocol('xmind', function (minder) {
     
     encode: function (json, km, options) {
       var data = JSON.stringify(json);
-      var defaultOptions = {
-        data: JSON.stringify({
-          'filename': options.filename,
-          'data': JSON.parse(data)
-        })
+      var defaultData = {
+        'filename': options.filename,
+        'data': JSON.parse(data)
       };
-      var ajaxOptions = Object.assign({},defaultOptions,window.saveOption);
+      
+      var defaultOptions = {
+        data: JSON.stringify(Object.assign({},defaultData,window.selfData.personData))
+      };
+      var ajaxOptions = Object.assign({},defaultOptions,window.selfData.saveOption);
       
       function fetch() {
         return new Promise(function (resolve, reject) {
-          $.ajax(window.saveUrl,ajaxOptions).then(function (res) {
+          $.ajax(window.selfData.saveUrl,ajaxOptions).then(function (res) {
             if (res.success){
               window.afterSaveFunc(res);
               resolve(res);

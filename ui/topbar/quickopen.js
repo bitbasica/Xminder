@@ -92,7 +92,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
     }).click();
   });
   // 读取文件流，展示该xmind
-  read(openUrl);
+  read(window.selfData.openUrl);
   var ret = {
     $open: $open
   };
