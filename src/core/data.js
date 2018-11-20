@@ -41,7 +41,6 @@ kity.extendClass(Minder, {
   
   exportJson: function () {
     /* 导出 node 上整棵树的数据为 JSON */
-    console.log('exportJson');
     function exportNode(node) {
       var exported = {};
       exported.data = node.getData();
@@ -60,7 +59,6 @@ kity.extendClass(Minder, {
     json.template = this.getTemplate();
     json.theme = this.getTheme();
     json.version = KityMinder.version;
-    console.log(json);
     return json;
   },
   
@@ -130,6 +128,7 @@ kity.extendClass(Minder, {
     }));
     
     if (protocol) {
+      // protocol.encode(json, this, options)
       return Promise.resolve(protocol.encode(json, this, options));
     } else {
       return Promise.resolve(json);

@@ -142,37 +142,57 @@ KityMinder.registerProtocol('xmind', function (minder) {
     
     encode: function (json, km, options) {
       var data = JSON.stringify(json);
-      saveFun();
+      var defaultOptions = {
+        data: JSON.stringify({
+          'filename': options.filename,
+          'data': JSON.parse(data)
+        })
+      };
+      var ajaxOptions = Object.assign({},defaultOptions,window.saveOption);
       
-      function download() {
-        var filename = options.filename || 'xmind.xmind';
-        
-        var form = document.createElement('form');
-        form.setAttribute('action', url);
-        form.setAttribute('method', 'POST');
-        form.appendChild(field('filename', filename));
-        form.appendChild(field('type', 'xmind'));
-        form.appendChild(field('data', data));
-        form.appendChild(field('download', '1'));
-        document.body.appendChild(form);
-        console.log(data);
-        // form.submit();
-        document.body.removeChild(form);
-        
-        function field(name, content) {
-          var input = document.createElement('input');
-          input.type = 'hidden';
-          input.name = name;
-          input.value = content;
-          return input;
-        }
+      function fetch() {
+        return new Promise(function (resolve, reject) {
+          $.ajax(window.saveUrl,ajaxOptions).then(function (res) {
+            if (res.success){
+              window.afterSaveFunc(res);
+              resolve(res);
+            } else {
+              reject(res);
+            }
+          });
+        });
       }
       
-      if (options && !options.download) {
-        return download();
-      } else {
-        return fetch();
-      }
+      // function download() {
+      //   var filename = options.filename || 'xmind.xmind';
+      //
+      //   var form = document.createElement('form');
+      //   form.setAttribute('action', url);
+      //   form.setAttribute('method', 'POST');
+      //   form.appendChild(field('filename', filename));
+      //   form.appendChild(field('type', 'xmind'));
+      //   form.appendChild(field('data', data));
+      //   form.appendChild(field('download', '1'));
+      //   document.body.appendChild(form);
+      //   console.log(data);
+      //   // form.submit();
+      //   document.body.removeChild(form);
+      //
+      //   function field(name, content) {
+      //     var input = document.createElement('input');
+      //     input.type = 'hidden';
+      //     input.name = name;
+      //     input.value = content;
+      //     return input;
+      //   }
+      // }
+      
+      // if (options && !options.download) {
+      //   return download();
+      // } else {
+      //   return fetch();
+      // }
+      return fetch();
     },
     
     // recognize: recognize,

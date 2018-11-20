@@ -37,17 +37,18 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       download: true,
       filename: filename
     };
-    
+    var notice = minder.getUI('widget/notice');
     minder.exportData(protocol.name, options).then(function (data) {
-      console.log(protocol.name);
-      console.log(data);
-    })['catch'](function exportError(e) {
-      console.log('exportError');
-      var notice = minder.getUI('widget/notice');
-      return notice.error('err_download', e);
-    }).then(function done(tick) {
-    
+      notice.info('保存成功');
+    }).catch(function (err) {
+      notice.error('保存失败');
     });
+    //     ['catch'](function exportError(e) {
+    //
+    //   return notice.error('err_download', e);
+    // }).then(function done(tick) {
+    //
+    // });
   }
   
   minder.on('uiready', function quickVisit() {

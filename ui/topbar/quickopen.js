@@ -68,10 +68,9 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       var doc = {
         content: data.content,
         protocol: protocol.name,
-        title: '2323.xmind',
+        title: window.sessionStorage.getItem('xmindName'),
         source: 'netdisk'
       };
-      console.log(doc);
       return $doc.load(doc);
     }
     
