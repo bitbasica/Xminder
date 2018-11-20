@@ -213,7 +213,6 @@ KityMinder.LANG['zh-cn'] = {
 
         'load_success': '{0} 加载成功',
         'save_success': '{0} 已保存于 {1}',
-        'autosave_success': '{0} 已自动保存于 {1}',
 
         'selectall': '全选',
         'selectrevert': '反选',

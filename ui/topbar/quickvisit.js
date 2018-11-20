@@ -43,12 +43,6 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
     }).catch(function (err) {
       notice.error('保存失败');
     });
-    //     ['catch'](function exportError(e) {
-    //
-    //   return notice.error('err_download', e);
-    // }).then(function done(tick) {
-    //
-    // });
   }
   
   minder.on('uiready', function quickVisit() {
