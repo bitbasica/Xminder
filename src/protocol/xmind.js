@@ -96,9 +96,15 @@ KityMinder.registerProtocol('xmind', function (minder) {
       
       function getEntries(url, onend) {
         return new Promise(function (resolve, reject) {
-          zip.createReader(new zip.HttpReader(url), function (zipReader) {
-            zipReader.getEntries(resolve);
-          }, reject);
+          if (typeof url === "string") {
+            zip.createReader(new zip.HttpReader(url), function (zipReader) {
+              zipReader.getEntries(resolve);
+            }, reject);
+          } else {
+            zip.createReader(new zip.BlobReader(url), function (zipReader) {
+              zipReader.getEntries(resolve);
+            }, reject);
+          }
         });
       }
       
