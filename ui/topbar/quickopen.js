@@ -88,6 +88,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
     $('<input type="file" />')
     .attr('accept', accepts.join())
     .on('change', function (e) {
+      window.sessionStorage.setItem('localXmindFileName',this.files[0].name);
       read(this.files[0]);
     }).click();
   });

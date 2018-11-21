@@ -74,11 +74,16 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
     }
     
     function quickSave() {
-      minder.getSupportedProtocols().forEach(function (protocol) {   //快速保存
-        if (protocol.encode) {
-          doExport(protocol);
-        }
-      });
+      if (window.sessionStorage.getItem('localXmindFileName')=== minder.getMinderTitle()+ '.xmind'){
+        var notice = minder.getUI('widget/notice');
+        notice.warn('无法保存本地读取的文件，请将文件手动上传到网盘系统');
+      }else {
+        minder.getSupportedProtocols().forEach(function (protocol) {   //快速保存
+          if (protocol.encode) {
+            doExport(protocol);
+          }
+        });
+      }
     }
     
     
