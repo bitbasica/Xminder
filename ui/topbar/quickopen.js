@@ -80,6 +80,8 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
       
       $(minder.getRenderTarget()).removeClass('loading');
       
+    }).catch(function(err){
+      console.log(2);
     });
   }
   
