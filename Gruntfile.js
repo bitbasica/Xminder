@@ -115,7 +115,7 @@ module.exports = function(grunt) {
             },
             mise: {
                 files: [{
-                    src: ['LICENSE', 'favicon.ico', 'README.md', 'CHANGELOG.md'],
+                    src: ['LICENSE', 'favicon.ico', 'README.md', 'CHANGELOG.md', 'example.xmind'],
                     dest: distPath
                 }]
             }

@@ -6,8 +6,10 @@
 ```javascript
   var selfData = {
           // 开始打开本页面时自动去读取这个链接的xmind文件，文件id存在session中
-          openUrl: '/xmind/djcpsdocument/fileManager/downloadFile.do?id='+ window.sessionStorage.getItem('xmindID'),
-          // 保存接口
+          openUrl: './example.xmind',
+          // 保存接口,导出文件到本地需要后端接口支持，因为xmind是java写，
+          // 有直接的SDK可以使用，就在xmind安装目录中的`plugins/org.xmind.core_3.7.8.201807240049.jar`中，
+          // https://github.com/xmindltd/xmind/wiki/UsingXmindAPI
           saveUrl: '/xmind/djcpsdocument/fileManager/saveXmind.do?',
           // 保存接口的配置
           saveOption: {
@@ -16,14 +18,19 @@
           },
           // 保存接口的额外参数
           personData: {
+            // 保存的时候去sessionStorage获取文件id
             fid: window.sessionStorage.getItem('xmindID'),
           },
           // 保存之后进行的操作
           afterSaveFunc: function (res) {
-
+            
           }
         }
 ```
+
+
+
+
 
 ## 简介
 
