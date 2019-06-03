@@ -1,6 +1,0 @@
-{
-    "name": "kityminder",
-    "dependencies": {
-        "codemirror": "4.7.0"
-    }
-}

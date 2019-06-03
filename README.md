@@ -1,37 +1,10 @@
-# 修改
-基于Kity Minder二次修改，移除百度验证和其他功能，只保留xmind功能，支持在线预览、编辑，支持本地读取、远程文件流链接读取
-
-# 使用方法
-1.编辑edit.html中的`selfData`
-```javascript
-  var selfData = {
-          // 开始打开本页面时自动去读取这个链接的xmind文件，文件id存在session中
-          openUrl: './example.xmind',
-          // 保存接口,导出文件到本地需要后端接口支持，因为xmind是java写，
-          // 有直接的SDK可以使用，就在xmind安装目录中的`plugins/org.xmind.core_3.7.8.201807240049.jar`中，
-          // https://github.com/xmindltd/xmind/wiki/UsingXmindAPI
-          saveUrl: '/xmind/djcpsdocument/fileManager/saveXmind.do?',
-          // 保存接口的配置
-          saveOption: {
-            method: 'POST',
-            contentType: 'applicaiton/json',
-          },
-          // 保存接口的额外参数
-          personData: {
-            // 保存的时候去sessionStorage获取文件id
-            fid: window.sessionStorage.getItem('xmindID'),
-          },
-          // 保存之后进行的操作
-          afterSaveFunc: function (res) {
-            
-          }
-        }
-```
 
 
 
 
-
+基于Kity Minder，移除百度验证，支持在线预览、编辑，支持本地读取、远程文件流链接读取
+==========
+* 在edit.html中配置需要读取的远程链接和数据保存方法。
 ## 简介
 
 KityMinder 是百度 FEX 团队的 f-cube 小组（原 UEditor 小组）的又一力作。作为一款在线的脑图编辑工具，它有着不亚于 native 脑图工具的交互体验。同时，它充分发挥了 Web 云存储的优势，可以直接将编辑中的脑图同步到云端。此外，借由独创的 “云盘分享”功能，用户可以一键将当前编辑的脑图直接生成在线链接共享给其他用户，实现无缝沟通。
